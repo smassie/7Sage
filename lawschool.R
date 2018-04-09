@@ -1,50 +1,7 @@
 ### Law school admissions analysis ####
 
-# Samuel Massie, 7Sage Admissions
-# March 15, 2018
 
-# Does applying Early Decision (ED) improve your chances of admission?  By how much?
-# What about applying as an Under-Represented Minority (URM)?
-# What about applying earlier in the cycle?  (Law school admissions are rolling)
-
-# Data Source: MyLSN http://mylsn.info/r/pre-law/admissions/search/
-#   LSAT: 120-180 (note: includes extremes of data ranges?)
-#   GPA: 1-4.33
-#   "Normal"
-#   Include all cycles from 2011-2012 to 2017-18 (note: exclude latest cycle since incomplete)
-#   Include URM
-#   Include ED
-
-# install.packages('dplyr')
-setwd("~/Documents/R stuff")
-library(dplyr, rlist)
-
-
-###### 1. Get and clean data #######
-
-# Assumes there is a file 'myles_raw.csv' in the working directory
-con <- file('mylsn_raw.csv')
-rawdata <- read.csv(con, header = TRUE)
-# close(con)
-
-# Add binary colummn for "accepted."
-rawdata <- mutate(rawdata, accepted = status %in% c('Ac','AcWa'))
-
-
-## Changes needed to data
-
-
-#hist(rawdata$lsat)
-#hist(rawdata$gpa   )
-
-
-###### 2. Descriptive analysis #######
-
-## Get school list
-# rawdata <- group_by(rawdata, school)
-# school_list <- summarize(rawdata)
-# write.csv(school_list, file = "school_list.csv")
-
+## RAA FUCK SHIT UP
 
 ### Create crosstab of school, cycle, ED vs. non ED, and admissions rate
 
